@@ -43,6 +43,21 @@
   font-size: small;
 }
 
+.animateItems {
+  animation: up 3s linear;
+}
+
+@keyframes up {
+  from {
+    transform: translateY(50%);
+    opacity: 0.5;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .swiper-pagination-bullet-active {
   color: #fff;
   background: hsl(180, 100%, 25%) !important;
