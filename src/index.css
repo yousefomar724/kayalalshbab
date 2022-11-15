@@ -58,6 +58,27 @@
   }
 }
 
+.eax {
+  margin-left: 17px;
+  margin-top: 17px;
+  cursor: pointer;
+  height: 24px !important;
+  width: 24px !important;
+  transition: all 0.3s ease;
+}
+
+input,
+textarea,
+button,
+select,
+div,
+.eax,
+.class,
+p,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
 .swiper-pagination-bullet-active {
   color: #fff;
   background: hsl(180, 100%, 25%) !important;
