@@ -28,6 +28,15 @@ const Items = ({ filteredItems, isSubmitted }) => {
     },
   }
 
+  const centerActive = () => {
+    const activeCat = document.querySelector(".swiper-pagination-bullet-active")
+    activeCat?.scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+      inline: "center",
+    })
+  }
+
   return (
     <Swiper
       allowSlideNext={!isSubmitted}
@@ -36,14 +45,8 @@ const Items = ({ filteredItems, isSubmitted }) => {
       pagination={pagination}
       modules={[Pagination]}
       onSlideChange={() => {
-        const activeCat = document.querySelector(
-          ".swiper-pagination-bullet-active"
-        )
-        activeCat?.scrollIntoView({
-          behavior: "smooth",
-          block: "center",
-          inline: "center",
-        })
+        setTimeout(() => window.scroll({ top: 0, behavior: "smooth" }))
+        setTimeout(() => centerActive(), 500)
       }}
     >
       {categories.map((category, i) => (
